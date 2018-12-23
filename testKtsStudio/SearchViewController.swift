@@ -18,12 +18,12 @@ class SearchViewController: UITableViewController, UISearchBarDelegate {
     var image: [UIImage] = []
     var searchName: String?
     
-   // MARK: ----UITableViewDataSource
-     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    // MARK: ----UITableViewDataSource
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.movies.count;
     }
     
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier = "Identifier"
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         if indexPath.row < self.movies.count {
